@@ -16,7 +16,7 @@ public class Instytuty {
     @JoinColumn(name = "ID_Wydzialu")
     private Wydzialy wydzialy;
 
-    @Column(name = "NazwaInstytutu")
+    @Column(name = "Nazwa_Instytutu")
     private String nazwaInstytutu;
 
     @Column(name = "NazwaSkrotowaInstytutu")
