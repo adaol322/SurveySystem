@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-ejb" name="SurveySystem:ejb exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/SurveySystem_ejb_exploded</output-path>
-    <root id="root">
-      <element id="javaee-facet-resources" facet="SurveySystem/ejb/EJB" />
-      <element id="javaee-facet-classes" facet="SurveySystem/ejb/EJB" />
-    </root>
-  </artifact>
-</component>
