@@ -1,11 +1,14 @@
 package surveys.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -22,4 +25,9 @@ public class Lecturers implements Serializable {
 
     @Column(name = "surname")
     private String surname;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "lecturers")
+    private List<Surveys> surveyss;
+
 }

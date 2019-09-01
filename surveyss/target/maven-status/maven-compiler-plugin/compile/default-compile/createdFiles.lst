@@ -1,5 +1,14 @@
+surveys\REST\SubjectsREST.class
+surveys\REST\LecturerREST.class
+surveys\REST\SurveysREST.class
+surveys\REST\QuestionsREST.class
+surveys\Entities\Lecturers.class
+surveys\Beans\SubjectsBean.class
+surveys\Beans\SurveysBean.class
 Main.class
 surveys\Beans\LecturerBean.class
-surveys\Entities\Lecturers.class
+surveys\Entities\Subjects.class
 surveys\PathActivator.class
-surveys\REST\LecturerREST.class
+surveys\Entities\Questions.class
+surveys\Entities\Surveys.class
+surveys\Beans\QuestionsBean.class

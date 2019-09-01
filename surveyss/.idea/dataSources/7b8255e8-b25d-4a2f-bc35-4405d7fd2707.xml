@@ -1124,27 +1124,152 @@
     <table id="282" parent="7" name="lecturers">
       <Engine>MyISAM</Engine>
     </table>
-    <column id="283" parent="282" name="idLecturers">
+    <table id="283" parent="7" name="questions"/>
+    <table id="284" parent="7" name="subjects"/>
+    <table id="285" parent="7" name="surveys"/>
+    <table id="286" parent="7" name="surveys_has_questions"/>
+    <column id="287" parent="282" name="idLecturers">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="282" name="name">
+    <column id="288" parent="282" name="name">
       <Position>2</Position>
       <DataType>varchar(225)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="282" name="surname">
+    <column id="289" parent="282" name="surname">
       <Position>3</Position>
       <DataType>varchar(225)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="286" parent="282" name="PRIMARY">
+    <key id="290" parent="282" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idLecturers</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="291" parent="283" name="idquestions">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="283" name="question">
+      <Position>2</Position>
+      <DataType>varchar(225)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="293" parent="283" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idquestions</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="294" parent="284" name="idsubjects">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="284" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="296" parent="284" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idsubjects</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="297" parent="285" name="idsurveys">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="298" parent="285" name="date">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="299" parent="285" name="lecturers_idLecturers">
+      <Position>3</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="300" parent="285" name="subjects_idsubjects">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="301" parent="285" name="fk_surveys_lecturers1_idx">
+      <ColNames>lecturers_idLecturers</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="302" parent="285" name="fk_surveys_subjects1_idx">
+      <ColNames>subjects_idsubjects</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="303" parent="285" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idsurveys</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="304" parent="285" name="fk_surveys_lecturers1">
+      <ColNames>lecturers_idLecturers</ColNames>
+      <RefSchemaName>surveys</RefSchemaName>
+      <RefTableName>lecturers</RefTableName>
+      <RefColNames>idLecturers</RefColNames>
+    </foreign-key>
+    <foreign-key id="305" parent="285" name="fk_surveys_subjects1">
+      <ColNames>subjects_idsubjects</ColNames>
+      <RefSchemaName>surveys</RefSchemaName>
+      <RefTableName>subjects</RefTableName>
+      <RefColNames>idsubjects</RefColNames>
+    </foreign-key>
+    <column id="306" parent="286" name="surveys_idsurveys">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="307" parent="286" name="questions_idquestions">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="308" parent="286" name="fk_surveys_has_questions_surveys1_idx">
+      <ColNames>surveys_idsurveys</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="309" parent="286" name="fk_surveys_has_questions_questions1_idx">
+      <ColNames>questions_idquestions</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="310" parent="286" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>surveys_idsurveys
+questions_idquestions</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="311" parent="286" name="fk_surveys_has_questions_surveys1">
+      <ColNames>surveys_idsurveys</ColNames>
+      <RefSchemaName>surveys</RefSchemaName>
+      <RefTableName>surveys</RefTableName>
+      <RefColNames>idsurveys</RefColNames>
+    </foreign-key>
+    <foreign-key id="312" parent="286" name="fk_surveys_has_questions_questions1">
+      <ColNames>questions_idquestions</ColNames>
+      <RefSchemaName>surveys</RefSchemaName>
+      <RefTableName>questions</RefTableName>
+      <RefColNames>idquestions</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
