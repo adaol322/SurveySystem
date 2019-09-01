@@ -1,0 +1,5 @@
+Main.class
+surveys\Beans\LecturerBean.class
+surveys\Entities\Lecturers.class
+surveys\PathActivator.class
+surveys\REST\LecturerREST.class
