@@ -1,5 +1,6 @@
 package surveys.Beans;
 
+import surveys.DTO.LecturersDTO;
 import surveys.Entities.Lecturers;
 
 import javax.ejb.Stateless;
@@ -13,7 +14,10 @@ public class LecturerBean {
     @PersistenceContext(name = "lecturers")
     private EntityManager entityManager;
 
-    public void create(Lecturers lecturers) {
+    public void create(LecturersDTO lecturersDTO) {
+        Lecturers lecturers = new Lecturers();
+        lecturers.setName(lecturersDTO.getName());
+        lecturers.setSurname(lecturersDTO.getSurname());
         entityManager.persist(lecturers);
     }
 

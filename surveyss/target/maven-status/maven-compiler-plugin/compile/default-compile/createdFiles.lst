@@ -1,8 +1,12 @@
 surveys\REST\SubjectsREST.class
+surveys\DTO\SubjectsDTO.class
+surveys\DTO\SurveysDTO.class
 surveys\REST\LecturerREST.class
+surveys\DTO\LecturersDTO.class
 surveys\REST\SurveysREST.class
 surveys\REST\QuestionsREST.class
 surveys\Entities\Lecturers.class
+surveys\DTO\QuestionsDTO.class
 surveys\Beans\SubjectsBean.class
 surveys\Beans\SurveysBean.class
 Main.class

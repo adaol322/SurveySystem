@@ -1,6 +1,7 @@
 package surveys.REST;
 
 import surveys.Beans.LecturerBean;
+import surveys.DTO.LecturersDTO;
 import surveys.Entities.Lecturers;
 
 import javax.ejb.EJB;
@@ -22,15 +23,15 @@ public class LecturerREST {
 
     @GET
     @Path("{id}")
-    public String getById(@PathParam("id") Long id) {
-        Lecturers lecturers = lecturerBean.find(id);
-        return String.valueOf(lecturers.getName());
+    public Lecturers getById(@PathParam("id") Long id) {
+        Lecturers lecturer = lecturerBean.find(id);
+        return lecturer;
     }
 
     @POST
     @Path("/add")
-    public void addLecturer(Lecturers lecturers) {
-        lecturerBean.create(lecturers);
+    public void createLecturer(LecturersDTO lecturersDTO) {
+        lecturerBean.create(lecturersDTO);
     }
 
     @PUT

@@ -15,6 +15,7 @@ public class SurveysBean {
     private EntityManager entityManager;
 
     public void create(Surveys surveys) {
+
         entityManager.persist(surveys);
     }
 

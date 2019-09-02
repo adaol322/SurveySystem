@@ -23,7 +23,9 @@ public class SurveysREST {
 
     @POST
     @Path("/add")
-    public void addLecturer(Surveys surveys) {
+    public void createSurvey(Surveys surveys) {
         surveysBean.create(surveys);
     }
+
+
 }

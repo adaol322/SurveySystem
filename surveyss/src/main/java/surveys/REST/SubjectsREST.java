@@ -23,7 +23,7 @@ public class SubjectsREST {
 
     @POST
     @Path("/add")
-    public void addLecturer(Subjects subjects) {
+    public void createSubject(Subjects subjects) {
         subjectsBean.create(subjects);
     }
 

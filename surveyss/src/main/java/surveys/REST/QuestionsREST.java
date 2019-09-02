@@ -23,7 +23,7 @@ public class QuestionsREST {
 
     @POST
     @Path("/add")
-    public void addLecturer(Questions questions) {
+    public void createQuestion(Questions questions) {
         questionsBean.create(questions);
     }
 }
