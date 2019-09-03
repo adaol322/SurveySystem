@@ -1,6 +1,7 @@
 package surveys.REST;
 
 import surveys.Beans.SurveysBean;
+import surveys.DTO.SurveysDTO;
 import surveys.Entities.Surveys;
 
 import javax.ejb.EJB;
@@ -23,8 +24,8 @@ public class SurveysREST {
 
     @POST
     @Path("/add")
-    public void createSurvey(Surveys surveys) {
-        surveysBean.create(surveys);
+    public void createSurvey(SurveysDTO surveysDTO) {
+        surveysBean.create(surveysDTO);
     }
 
 

@@ -1,5 +1,6 @@
 package surveys.Beans;
 
+import surveys.DTO.SurveysDTO;
 import surveys.Entities.Surveys;
 
 import javax.ejb.Stateless;
@@ -14,9 +15,9 @@ public class SurveysBean {
     @PersistenceContext(name = "surveys")
     private EntityManager entityManager;
 
-    public void create(Surveys surveys) {
+    public void create(SurveysDTO surveysDTO) {
 
-        entityManager.persist(surveys);
+        entityManager.persist(surveysDTO);
     }
 
     public List<Surveys> readAll() {
