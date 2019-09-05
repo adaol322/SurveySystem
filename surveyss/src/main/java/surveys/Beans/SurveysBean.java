@@ -2,8 +2,10 @@ package surveys.Beans;
 
 import surveys.DTO.SurveysDTO;
 import surveys.Entities.Surveys;
+import surveys.service.SurveysService;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -15,9 +17,12 @@ public class SurveysBean {
     @PersistenceContext(name = "surveys")
     private EntityManager entityManager;
 
-    public void create(SurveysDTO surveysDTO) {
+    @Inject
+    SurveysService surveysService;
 
-        entityManager.persist(surveysDTO);
+    public void create(SurveysDTO surveysDTO) {
+        Surveys surveys = surveysService.createSurvey(surveysDTO);
+        entityManager.persist(surveys);
     }
 
     public List<Surveys> readAll() {

@@ -26,4 +26,8 @@ public class Questions implements Serializable {
     @ManyToMany(mappedBy = "questionss")
     private List<Surveys> surveyss;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "questions_fk")
+    private List<Answers> answers;
+
 }

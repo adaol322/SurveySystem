@@ -20,9 +20,9 @@ public class Answers implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "questions_idquestions", nullable = false)
-    private Questions question;
+    private Questions questions_fk;
 
     @ManyToOne
     @JoinColumn(name = "surveys_idsurveys", nullable = false)
-    private Surveys survey;
+    private Surveys surveys_fk;
 }

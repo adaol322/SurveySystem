@@ -6,7 +6,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -18,7 +18,7 @@ public class Surveys implements Serializable {
     private int idsurveys;
 
     @Column(name = "date")
-    private Date date;
+    private LocalDate date;
 
     @ManyToOne
     @JoinColumn(name = "lecturers_idLecturers", nullable = false)
@@ -29,13 +29,16 @@ public class Surveys implements Serializable {
     private Subjects subjects;
 
     @JsonIgnore
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(
-        name = "surveys_has_questions",
-        joinColumns = { @JoinColumn(name = "surveys_idsurveys") },
-        inverseJoinColumns = { @JoinColumn(name = "questions_idquestions") }
+            name = "surveys_has_questions",
+            joinColumns = {@JoinColumn(name = "surveys_idsurveys")},
+            inverseJoinColumns = {@JoinColumn(name = "questions_idquestions")}
     )
-    List<Questions> questionss;
+    private List<Questions> questionss;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "surveys_fk")
+    private List<Answers> answers;
 
 }

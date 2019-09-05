@@ -2,8 +2,10 @@ package surveys.Beans;
 
 import surveys.DTO.LecturersDTO;
 import surveys.Entities.Lecturers;
+import surveys.Utility.Mapper;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -14,11 +16,11 @@ public class LecturerBean {
     @PersistenceContext(name = "lecturers")
     private EntityManager entityManager;
 
+    @Inject
+    Mapper mapper;
+
     public void create(LecturersDTO lecturersDTO) {
-        Lecturers lecturers = new Lecturers();
-        lecturers.setName(lecturersDTO.getName());
-        lecturers.setSurname(lecturersDTO.getSurname());
-        entityManager.persist(lecturers);
+        entityManager.persist(mapper.mapToLecturersEntity(lecturersDTO));
     }
 
     public List<Lecturers> readAll() {
