@@ -16,7 +16,7 @@ import java.util.Set;
 public class Subjects implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idsubjects;
+    private Long idsubjects;
 
     @Column(name = "name")
     private String name;

@@ -2,7 +2,7 @@ package surveys.Beans;
 
 import surveys.DTO.LecturersDTO;
 import surveys.Entities.Lecturers;
-import surveys.Utility.Mapper;
+import surveys.Utility.DTOMapper;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -15,13 +15,6 @@ import java.util.List;
 public class LecturerBean {
     @PersistenceContext(name = "lecturers")
     private EntityManager entityManager;
-
-    @Inject
-    Mapper mapper;
-
-    public void create(LecturersDTO lecturersDTO) {
-        entityManager.persist(mapper.mapToLecturersEntity(lecturersDTO));
-    }
 
     public List<Lecturers> readAll() {
         Query query = entityManager.createQuery("select x from Lecturers x", Lecturers.class);

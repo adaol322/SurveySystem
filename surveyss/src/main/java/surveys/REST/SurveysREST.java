@@ -2,8 +2,7 @@ package surveys.REST;
 
 import surveys.Beans.SurveysBean;
 import surveys.DTO.SurveysDTO;
-import surveys.Entities.Surveys;
-import surveys.Utility.Mapper;
+import surveys.Utility.DTOMapper;
 
 import javax.ejb.EJB;
 import javax.inject.Inject;
@@ -19,11 +18,8 @@ public class SurveysREST {
     @EJB
     SurveysBean surveysBean;
 
-    @Inject
-    Mapper mapper;
-
     @GET
-    public List<Surveys> getAllQuestions() {
+    public List<SurveysDTO> getAllQuestions() {
         return surveysBean.readAll();
     }
 

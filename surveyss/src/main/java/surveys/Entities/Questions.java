@@ -17,7 +17,7 @@ public class Questions implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idquestions;
+    private Long idquestions;
 
     @Column(name = "question")
     private String question;

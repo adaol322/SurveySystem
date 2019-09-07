@@ -28,12 +28,6 @@ public class LecturerREST {
         return lecturer;
     }
 
-    @POST
-    @Path("/add")
-    public void createLecturer(LecturersDTO lecturersDTO) {
-        lecturerBean.create(lecturersDTO);
-    }
-
     @PUT
     @Path("/modify/{id}")
     public void editLecturer(@PathParam("id") Long id) {

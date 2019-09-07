@@ -4,10 +4,7 @@ import surveys.Beans.AnswersBean;
 import surveys.DTO.AnswersDTO;
 
 import javax.ejb.EJB;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -22,7 +19,14 @@ public class AnswersREST {
     @POST
     @Path("/add")
     public Response saveAnswer(AnswersDTO answersDTO) {
-
+        answersBean.createAnswer(answersDTO);
         return Response.ok().build();
     }
+
+    @GET
+    public Response getAnswers(){
+        return Response.ok(answersBean.getAnswers()).build();
+    }
+
+
 }
