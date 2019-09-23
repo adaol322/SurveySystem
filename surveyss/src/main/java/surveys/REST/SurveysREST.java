@@ -20,7 +20,8 @@ public class SurveysREST {
 
     @GET
     public List<SurveysDTO> getAllQuestions() {
-        return surveysBean.readAll();
+        List<SurveysDTO> sur = surveysBean.readAll();
+        return sur;
     }
 
     @POST

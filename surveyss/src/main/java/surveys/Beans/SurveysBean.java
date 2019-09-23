@@ -1,6 +1,7 @@
 package surveys.Beans;
 
-import surveys.DTO.*;
+import surveys.DTO.AnswersDTO;
+import surveys.DTO.SurveysDTO;
 import surveys.Entities.*;
 import surveys.Utility.DTOMapper;
 
@@ -16,15 +17,20 @@ import java.util.stream.Collectors;
 @Stateless
 public class SurveysBean {
 
-    @PersistenceContext
-    private EntityManager entityManager;
-
     @Inject
     DTOMapper mapper;
+    @PersistenceContext
+    private EntityManager entityManager;
 
     public void create(SurveysDTO surveysDTO) {
         Surveys surveys = createSurvey(surveysDTO);
         entityManager.persist(surveys);
+        surveysDTO.setIdSurveys(surveys.getIdsurveys());
+        List<AnswersDTO> answerList = surveysDTO.getAnswersDTOS();
+        if (answerList != null) {
+            answerList
+                    .forEach(answerDTO -> createAnswer(answerDTO, surveysDTO));
+        }
     }
 
     public Surveys createSurvey(SurveysDTO surveysDTO) {
@@ -32,12 +38,10 @@ public class SurveysBean {
         surveys.setDate(LocalDate.parse(surveysDTO.getDate()));
         surveys.setLecturers(findLecturerInDBFromSurveyDTO(surveysDTO.getLecturerDTO().getIdLecturers()));
         surveys.setSubjects(findSubjectInDBFromSurveyDTO(surveysDTO.getSubjectDTO().getIdSubjects()));
-        surveysDTO.getAnswersDTOS()
-                .forEach(answerDTO -> createAnswer(answerDTO, surveysDTO));
         return surveys;
     }
 
-    public void createAnswer(AnswersDTO answersDTO, SurveysDTO surveysDTO){
+    public void createAnswer(AnswersDTO answersDTO, SurveysDTO surveysDTO) {
         Answers answers = new Answers();
         answers.setAnswer(answersDTO.getAnswer());
         answers.setQuestions_fk(findQuestionById(answersDTO.getQuestionDTO().getIdQuestions()));
@@ -45,13 +49,13 @@ public class SurveysBean {
         entityManager.persist(answers);
     }
 
-    public Questions findQuestionById(Long idQuestions){
+    public Questions findQuestionById(Long idQuestions) {
         return entityManager.createQuery("select x from Questions x where x.idquestions=:idquestion", Questions.class)
                 .setParameter("idquestion", idQuestions)
                 .getSingleResult();
     }
 
-    public Surveys findSurveyById(Long idSurveys){
+    public Surveys findSurveyById(Long idSurveys) {
         return entityManager.createQuery("select x from Surveys x where x.idsurveys=:idsurveys", Surveys.class)
                 .setParameter("idsurveys", idSurveys)
                 .getSingleResult();
@@ -70,7 +74,7 @@ public class SurveysBean {
                 .getSingleResult();
     }
 
-    public List<AnswersDTO> getAnswersBySurveyId(SurveysDTO surveysDTO){
+    public List<AnswersDTO> getAnswersBySurveyId(SurveysDTO surveysDTO) {
         return entityManager.createQuery("select x from Answers x where x.surveys_fk=:idsurveys", Answers.class)
                 .setParameter("idsurveys", surveysDTO.getIdSurveys())
                 .getResultList().stream()
@@ -88,6 +92,7 @@ public class SurveysBean {
 
     public SurveysDTO mapToSurveysDTO(Surveys surveys) {
         SurveysDTO surveysDTO = new SurveysDTO();
+        surveysDTO.setIdSurveys(surveys.getIdsurveys());
         surveysDTO.setDate(surveys.getDate().toString());
         surveysDTO.setLecturerDTO(mapper.mapToLecturersDTO(surveys.getLecturers()));
         surveysDTO.setSubjectDTO(mapper.mapToSubjectsDTO(surveys.getSubjects()));

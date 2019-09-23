@@ -12,7 +12,6 @@ import java.util.Set;
 
 @Entity
 @Data
-@ToString
 @EqualsAndHashCode(of = "idLecturers")
 public class Lecturers implements Serializable {
 

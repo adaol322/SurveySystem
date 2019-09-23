@@ -7,6 +7,7 @@ import surveys.Entities.Lecturers;
 import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("lecturers")
@@ -17,8 +18,8 @@ public class LecturerREST {
     LecturerBean lecturerBean;
 
     @GET
-    public List<Lecturers> getAllLecturers() {
-        return lecturerBean.readAll();
+    public Response getAllLecturers() {
+        return Response.ok(lecturerBean.readAll()).build();
     }
 
     @GET

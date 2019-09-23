@@ -11,11 +11,10 @@ import java.util.List;
 
 @Entity
 @Data
-@ToString
 public class Surveys implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idsurveys;
+    private Long idsurveys;
 
     @Column(name = "date")
     private LocalDate date;

@@ -12,7 +12,6 @@ import java.util.Set;
 
 @Entity
 @Data
-@ToString
 public class Subjects implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
