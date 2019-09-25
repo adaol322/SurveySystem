@@ -19,6 +19,7 @@ public class SurveysBean {
 
     @Inject
     DTOMapper mapper;
+
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -89,6 +90,9 @@ public class SurveysBean {
                 .map(survey -> mapToSurveysDTO(survey)).collect(Collectors.toList());
     }
 
+    public SurveysDTO find(Long id){
+        return mapToSurveysDTO(entityManager.find(Surveys.class, id));
+    }
 
     public SurveysDTO mapToSurveysDTO(Surveys surveys) {
         SurveysDTO surveysDTO = new SurveysDTO();

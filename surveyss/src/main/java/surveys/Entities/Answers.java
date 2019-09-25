@@ -1,7 +1,6 @@
 package surveys.Entities;
 
 import lombok.Data;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
