@@ -1,0 +1,22 @@
+<button  routerLink="/createLecturer" routerLinkActive="active">Add Lecturer</button>
+
+<div class="center">
+    <table class="table table-trapped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>surname</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lecturer of lecturers ">
+                <td>{{lecturer.idLecturers}}</td>
+                <td>{{lecturer.name }} </td>
+                <td>{{lecturer.surname}}</td>
+                <td><button routerLink ="/updateLecturer" routerLinkActive="active">Edit Lecturer</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  

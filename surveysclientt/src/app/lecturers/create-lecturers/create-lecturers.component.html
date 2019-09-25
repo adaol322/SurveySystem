@@ -1,0 +1,15 @@
+<div class="center">
+    <div class="form-group">{{'Name '}}<input [(ngModel)]="name" required pattern="[A-Z][a-z]+"
+        #iflocation="ngModel">
+      <div class="alert alert-danger" *ngIf="!!iflocation.errors?.pattern">Name must start with Upper Case and contain only letters!</div>
+    </div>
+    <div class="form-group">{{'Surname '}}<input [(ngModel)]="surname" required pattern="[A-Z][a-z]+"
+        #iflocation="ngModel">
+      <div class="alert alert-danger" *ngIf="!!iflocation.errors?.pattern">Surname must start with Upper Case and contain only letters!</div>
+    </div>
+    <button (click)="createLecturer()" routerLink="/lecturers" routerLinkActive="active">Add lecturer</button>
+    <button routerLink="/lecturers" routerLinkActive="active">Back</button>
+  </div>
+  
+  
+  
