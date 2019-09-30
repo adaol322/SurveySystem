@@ -36,6 +36,7 @@ public class SurveysBean {
 
     public Surveys createSurvey(SurveysDTO surveysDTO) {
         Surveys surveys = new Surveys();
+        //TODO: current date
         surveys.setDate(LocalDate.parse(surveysDTO.getDate()));
         surveys.setLecturers(findLecturerInDBFromSurveyDTO(surveysDTO.getLecturerDTO().getIdLecturers()));
         surveys.setSubjects(findSubjectInDBFromSurveyDTO(surveysDTO.getSubjectDTO().getIdSubjects()));
@@ -75,11 +76,17 @@ public class SurveysBean {
                 .getSingleResult();
     }
 
-    public List<AnswersDTO> getAnswersBySurveyId(SurveysDTO surveysDTO) {
+    public List<Surveys> lecturerHasSurvey(Long id){
+        return entityManager.createQuery("select x from Surveys x where x.lecturers.idLecturers=:idLecturers",  Surveys.class)
+                .setParameter("idLecturers", id)
+                .getResultList();
+    }
+
+    public List<AnswersDTO> getAnswersBySurveyId(Long id) {
         return entityManager.createQuery("select x from Answers x where x.surveys_fk=:idsurveys", Answers.class)
-                .setParameter("idsurveys", surveysDTO.getIdSurveys())
+                .setParameter("idsurveys", id)
                 .getResultList().stream()
-                .map(answer -> mapToAnswersDTO(answer))
+                .map(this::mapToAnswersDTO)
                 .collect(Collectors.toList());
     }
 
@@ -87,7 +94,7 @@ public class SurveysBean {
         Query query = entityManager.createQuery("select x from Surveys x", Surveys.class);
         List<Surveys> list = query.getResultList();
         return list.stream()
-                .map(survey -> mapToSurveysDTO(survey)).collect(Collectors.toList());
+                .map(this::mapToSurveysDTO).collect(Collectors.toList());
     }
 
     public SurveysDTO find(Long id){

@@ -1,6 +1,7 @@
 package surveys.Utility;
 
 import surveys.DTO.LecturersDTO;
+import surveys.DTO.LecturersDetailsDTO;
 import surveys.DTO.QuestionsDTO;
 import surveys.DTO.SubjectsDTO;
 import surveys.Entities.Lecturers;
@@ -18,6 +19,17 @@ public class DTOMapper {
         lecturersDTO.setName(lecturers.getName());
         lecturersDTO.setSurname(lecturers.getSurname());
         return lecturersDTO;
+    }
+
+    public LecturersDetailsDTO mapToLecturersDetailsDTO(Lecturers lecturers) {
+        LecturersDetailsDTO lecturersDetailsDTO = new LecturersDetailsDTO();
+        lecturersDetailsDTO.setIdLecturers(lecturers.getIdLecturers());
+        lecturersDetailsDTO.setName(lecturers.getName());
+        lecturersDetailsDTO.setSurname(lecturers.getSurname());
+        lecturersDetailsDTO.setPhone(lecturers.getPhone());
+        lecturersDetailsDTO.setEmail(lecturers.getEmail());
+        lecturersDetailsDTO.setTitle(lecturers.getTitle());
+        return lecturersDetailsDTO;
     }
 
     public QuestionsDTO mapToQuestionsDTO(Questions questions) {

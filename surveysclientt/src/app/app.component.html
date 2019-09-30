@@ -1,8 +1,23 @@
-<h1 class = "center">Survey System</h1>
+<div class="jumbotron text-center" style="margin-bottom: 0">
+    <h1 style="color: rgb(0,0,0)">Survey System</h1>
+</div>
 <nav class = "center">
-    <button  routerLink="/lecturers" routerLinkActive="active">Lecturers</button>
-    <button  routerLink="/questions" routerLinkActive="active">Questions</button>
-    <button  routerLink="/subjects" routerLinkActive="active">Subjects</button>
-    <button  routerLink="/" routerLinkActive="active">Surveys</button>
+    <div class = "container">
+        <ul class="nav nav-fill nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/lecturers" routerLinkActive="active">Lecturers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/questions" routerLinkActive="active">Questions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/subjects" routerLinkActive="active">Subjects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/surveys" routerLinkActive="active">Surveys</a>
+            </li>
+        </ul>
+        <br>
+        <router-outlet></router-outlet>
+    </div>
 </nav>
-<router-outlet></router-outlet>

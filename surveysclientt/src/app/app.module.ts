@@ -13,6 +13,11 @@ import { CreateSurveyComponent } from './surveys/create-survey/create-survey.com
 import { SubjectsComponent } from './subjects/subjects.component';
 import { CreateLecturersComponent } from './lecturers/create-lecturers/create-lecturers.component';
 import { UpdateLecturersComponent } from './lecturers/update-lecturers/update-lecturers.component';
+import { ShowLecturersComponent } from './lecturers/show-lecturer/show-lecturer.component';
+import { ShowSurveyComponent } from './surveys/show-survey/show-survey.component';
+import { ShowAnswersComponent } from './surveys/show-answers/show-answers.component';
+import { CreateQuestionsComponent } from './questions/create-questions/create-questions.component';
+
 
 
 
@@ -25,7 +30,11 @@ import { UpdateLecturersComponent } from './lecturers/update-lecturers/update-le
     CreateSurveyComponent,
     SubjectsComponent,
     CreateLecturersComponent,
-    UpdateLecturersComponent
+    UpdateLecturersComponent,
+    ShowLecturersComponent,
+    ShowSurveyComponent,
+    ShowAnswersComponent,
+    CreateQuestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,7 @@ import { UpdateLecturersComponent } from './lecturers/update-lecturers/update-le
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
-        path: '',
+        path: 'surveys',
         component: SurveysComponent
       },
       {
@@ -59,8 +68,24 @@ import { UpdateLecturersComponent } from './lecturers/update-lecturers/update-le
         component: CreateLecturersComponent
       },
       {
-        path: 'updateLecturer',
+        path: 'updateLecturer/:id',
         component: UpdateLecturersComponent
+      },
+      {
+        path: 'showLecturer/:id',
+        component: ShowLecturersComponent
+      },
+      {
+        path: 'showSurvey/:id',
+        component: ShowSurveyComponent
+      },
+      {
+        path: 'showSurvey/:id/showAnswers',
+        component: ShowAnswersComponent
+      },
+      {
+        path: 'createQuestions',
+        component: CreateQuestionsComponent
       }
     ])
   ],

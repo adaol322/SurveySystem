@@ -1,6 +1,7 @@
 package surveys.Beans;
 
 import surveys.DTO.LecturersDTO;
+import surveys.DTO.LecturersDetailsDTO;
 import surveys.Entities.Lecturers;
 import surveys.Utility.DTOMapper;
 import surveys.Utility.Result;
@@ -32,15 +33,18 @@ public class LecturerBean {
         return entityManager.find(Lecturers.class, id);
     }
 
-    public Result edit(LecturersDTO lecturersDTO){
+    public Result edit(LecturersDetailsDTO lecturersDetailsDTO){
         Lecturers lecturers;
         try{
-            lecturers = find(lecturersDTO.getIdLecturers());
+            lecturers = find(lecturersDetailsDTO.getIdLecturers());
         } catch(Exception ex){
             return Result.FAILURE;
         }
-        lecturers.setName(lecturersDTO.getName());
-        lecturers.setSurname(lecturersDTO.getSurname());
+        lecturers.setName(lecturersDetailsDTO.getName());
+        lecturers.setSurname(lecturersDetailsDTO.getSurname());
+        lecturers.setPhone(lecturersDetailsDTO.getPhone());
+        lecturers.setEmail(lecturersDetailsDTO.getEmail());
+        lecturers.setTitle(lecturersDetailsDTO.getTitle());
         entityManager.merge(lecturers);
         return Result.SUCCESS;
     }
@@ -56,13 +60,13 @@ public class LecturerBean {
         }
     }
 
-    public void create(LecturersDTO lecturersDTO){
-//        if(!lecturersDTO.validate().isValid())
-//            return Result.FAILURE;
+    public void create(LecturersDetailsDTO lecturersDetailsDTO){
         Lecturers lecturers = new Lecturers();
-        lecturers.setName(lecturersDTO.getName());
-        lecturers.setSurname(lecturersDTO.getSurname());
+        lecturers.setName(lecturersDetailsDTO.getName());
+        lecturers.setSurname(lecturersDetailsDTO.getSurname());
+        lecturers.setPhone(lecturersDetailsDTO.getPhone());
+        lecturers.setEmail(lecturersDetailsDTO.getEmail());
+        lecturers.setTitle(lecturersDetailsDTO.getTitle());
         entityManager.persist(lecturers);
-//        return Result.SUCCESS;
     }
 }

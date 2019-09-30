@@ -15,6 +15,8 @@ export class LecturersComponent implements OnInit {
 
   readonly url = 'http://localhost:8080/surveys';
   lecturers: LecturersDTO[];
+  successMessage;
+  errorMessage;
 
   ngOnInit() {
     this.getAllLecturers();
@@ -26,7 +28,14 @@ export class LecturersComponent implements OnInit {
     });
   }
 
-
+  deleteLecturer(id: number) {
+    this.http.delete(this.url + '/lecturers/delete/' + id, {responseType: 'text'}).subscribe((data: any) => {
+      this.successMessage = data;
+      this.getAllLecturers();
+    }, error => {
+      this.errorMessage = error.error;
+    });
+  }
 
 
 }

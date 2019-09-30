@@ -1,6 +1,6 @@
 import { logging } from 'protractor';
 
-export class LecturersDTO {
+export interface LecturersDTO {
     idLecturers: number;
     name: string;
     surname: string;

@@ -25,6 +25,15 @@ public class Lecturers implements Serializable {
     @Column(name = "surname")
     private String surname;
 
+    @Column(name = "phone")
+    private String phone;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "title")
+    private String title;
+
     @JsonIgnore
     @OneToMany(mappedBy = "lecturers")
     private List<Surveys> surveyss;

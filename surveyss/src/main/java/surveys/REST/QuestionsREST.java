@@ -33,8 +33,10 @@ public class QuestionsREST {
 
     @POST
     @Path("/add")
-    public void createQuestion(QuestionsDTO questionsDTO) {
+    public Response createQuestion(QuestionsDTO questionsDTO) {
+
         questionsBean.create(questionsDTO);
+        return Response.ok(Messages.QUESTION_ADDED).build();
     }
 
     @GET

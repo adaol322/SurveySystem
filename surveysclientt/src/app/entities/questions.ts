@@ -1,5 +1,5 @@
 
-export class Questions {
+export interface Questions {
     idQuestions: number;
     question: string;
 }

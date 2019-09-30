@@ -7,62 +7,70 @@ import { LecturersDTO } from 'src/app/entities/lecturers';
 import { Questions } from 'src/app/entities/questions';
 
 @Component({
-  selector: 'app-survey',
+  selector: 'app-create-survey',
   templateUrl: './create-survey.component.html',
+  styleUrls: ['./create-survey.component.css']
 })
 
 export class CreateSurveyComponent implements OnInit {
 
     constructor(private http: HttpClient) {}
 
-    survey: Surveys = {date : null, lecturer : null, subject : null, answerList : null};
-    answer: Answers = {answer : null, question : null};
+    survey: Surveys = {date : null, lecturerDTO : null, subjectDTO : null, answersDTOS : null};
+    answer: Answers = {answer : null, questionDTO : null};
     readonly url = 'http://localhost:8080/surveys';
     date = '';
     lecturers: LecturersDTO[];
     lecturer: LecturersDTO;
-    idLecturers: number;
+    idLecturers = 0;
     subjects: Subjects[];
     subject: Subjects;
-    answerString: string;
+    idSubjects: number;
+    answerString = '';
     questions: Questions[];
-    index: number;
+    index = 0;
     json;
 
     ngOnInit() {
         this.getAllLecturers();
         this.getAllSubjects();
         this.getAllQuestions();
-        this.index = 0;
+        this.survey.answersDTOS = new Array<Answers>();
     }
 
     createSurvey() {
-        this.survey.date = this.date;
-        this.survey.lecturer = this.lecturer;
-        this.survey.subject = this.subject;
-        console.log(this.lecturer);
-        console.log(this.subject);
-        this.http.post(this.url + 'surveys/add', this.survey).toPromise().then((data: any) => {
-            this.clear();
+        // this.survey.date = this.date;
+        this.getLecturerById();
+        this.getSubjectById();
+        this.survey.date = '2019-01-01';
+    }
+
+    postSurvey() {
+        this.printSurvey();
+        this.http.post(this.url + '/surveys/add', this.survey).toPromise().then((data: any) => {
+            // this.clear();
             console.log(data);
             this.json = JSON.stringify(data.json);
         });
     }
 
+    printSurvey() {
+        console.log(this.lecturer);
+        console.log(this.subject);
+        console.log(this.survey);
+    }
+
     createAnswer() {
-        this.answer.answer = this.answerString;
-        this.answer.question = new Questions();
-        this.answer.question.idQuestions = this.index;
-        this.answer.question.question = this.questions[this.index].question;
-        this.survey.answerList = new Array<Answers>();
-        this.survey.answerList.push(this.answer);
-        console.log(this.answer);
-        console.log(this.questions);
-        if (this.index === 3) {
+        this.survey.answersDTOS.push(new Answers(this.answerString, this.questions[this.index]));
+        if (this.index === (this.questions.length - 1)) {
             this.createSurvey();
+            this.printSurvey();
+            this.postSurvey();
         }
         this.answerString = null;
         this.index++;
+        console.log(this.survey);
+
     }
 
     getAllLecturers() {
@@ -84,10 +92,20 @@ export class CreateSurveyComponent implements OnInit {
         });
     }
 
-    getLecturerById(){
-        this.http.get(this.url + '/lecturers' + this.idLecturers).subscribe((data: any) => {
+    getLecturerById() {
+        this.http.get(this.url + '/lecturers/' + this.idLecturers).subscribe((data: any) => {
+            console.log(data);
             this.lecturer = data;
+            this.survey.lecturerDTO = this.lecturer;
+            console.log(this.lecturer);
           });
+    }
+
+    getSubjectById() {
+        this.http.get(this.url + '/subjects/' + this.idSubjects).subscribe((data: any) => {
+            this.subject = data;
+            this.survey.subjectDTO = this.subject;
+        });
     }
 
     clear() {

@@ -6,7 +6,7 @@ import { Questions } from '../entities/questions';
 @Component({
   selector: 'app-questions',
   templateUrl: './questions.component.html',
-//   styleUrls: ['./questions.component.css']
+   styleUrls: ['./questions.component.css']
 })
 export class QuestionsComponent implements OnInit {
 

@@ -1,12 +1,13 @@
 surveys\Entities\Answers.class
 surveys\DTO\SubjectsDTO.class
+surveys\DTO\ErrorMessageDTO.class
 surveys\REST\LecturerREST.class
 surveys\REST\SurveysREST.class
 surveys\REST\QuestionsREST.class
 surveys\Utility\Validate.class
-surveys\service\SurveysService.class
 surveys\Utility\Messages.class
 surveys\Beans\SubjectsBean.class
+surveys\DTO\LecturersDetailsDTO.class
 surveys\Beans\SurveysBean.class
 surveys\Beans\LecturerBean.class
 surveys\Entities\Subjects.class

@@ -1,4 +1,4 @@
-<button  routerLink="/createSurvey" routerLinkActive="active">Surveys</button>
+<button  routerLink="/createSurvey" routerLinkActive="active">Participate in a survey</button>
 
 <div class="center">
     <table class="table table-trapped">
@@ -8,16 +8,17 @@
             <th>date</th>
             <th>lecturer</th>
             <th>subject</th>
-            <!-- <th>answers</th> -->
         </tr>
         </thead>
         <tbody>
             <tr *ngFor="let survey of surveys">
                 <td>{{survey.idSurveys }} </td>
                 <td>{{survey.date}}</td>
-                <td>{{survey.lecturerDTO.name}}</td>
+                <td>{{survey.lecturerDTO.name}} {{survey.lecturerDTO.surname}}</td>
                 <td>{{survey.subjectDTO.name}}</td>
-                <!-- <td>{{survey.answerDTOS}}</td> -->
+                <td><button [routerLink] ="['/showLecturer', survey.lecturerDTO.idLecturers]" routerLinkActive="active">Lecturer Details</button></td>
+                <td><button [routerLink] ="['/showSurvey', survey.idSurveys]" routerLinkActive="active">Survey Details</button></td>
+                
             </tr>
         </tbody>
     </table>

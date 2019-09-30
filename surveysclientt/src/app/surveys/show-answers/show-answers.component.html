@@ -1,0 +1,18 @@
+<div class="center">
+    <table class="table table-trapped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>answer</th>
+            <th>question</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let answer of answers ">
+                <td>{{answer.idAnswers}}</td>
+                <td>{{answer.answer}} </td>
+                <td>{{answer.questionDTO.question}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

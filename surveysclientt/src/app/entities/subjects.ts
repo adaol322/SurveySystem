@@ -1,5 +1,5 @@
 
-export class Subjects {
+export interface Subjects {
     idSubjects: BigInteger;
     name: string;
 }

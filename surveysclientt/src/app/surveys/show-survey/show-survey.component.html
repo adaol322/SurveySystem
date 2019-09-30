@@ -1,0 +1,8 @@
+<br><br>
+<h1>Survey Details</h1>
+<p><strong>ID: </strong>{{survey.idSurveys}}</p>
+<p><strong>Date: </strong>{{survey.date}}</p>
+<h2>Lecturer: {{survey.lecturerDTO.name}} {{survey.lecturerDTO.surname}}</h2>
+<h2>Subject: {{survey.subjectDTO.name}}</h2>
+<button [routerLink] ="['/showLecturer', survey.lecturerDTO.idLecturers]" routerLinkActive="active">Lecturer Details</button>
+<button [routerLink] ="['/showSurvey', survey.idSurveys, 'showAnswers']" routerLinkActive="active">Answers</button>

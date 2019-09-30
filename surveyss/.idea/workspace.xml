@@ -2,24 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38c4864e-c05b-4f49-bc50-eb1b086a1ba5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/surveys/Utility/Messages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/surveys/Utility/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/surveys/Utility/Validate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/surveys/DTO/ErrorMessageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDetailsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/entities/answers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/entities/answers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/entities/lecturers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/entities/lecturers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/entities/questions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/entities/questions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/entities/subjects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/entities/subjects.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/entities/surveys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/entities/surveys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/create-lecturers/create-lecturers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/create-lecturers/create-lecturers.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/create-lecturers/create-lecturers.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/create-lecturers/create-lecturers.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/lecturers.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/lecturers.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/lecturers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/lecturers.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/lecturers.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/lecturers.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/update-lecturers/update-lecturers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/update-lecturers/update-lecturers.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/update-lecturers/update-lecturers.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/lecturers/update-lecturers/update-lecturers.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/questions/questions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/questions/questions.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/questions/questions.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/questions/questions.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/subjects/subjects.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/subjects/subjects.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/surveys/create-survey/create-survey.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/surveys/create-survey/create-survey.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/surveys/create-survey/create-survey.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/surveys/create-survey/create-survey.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/surveys/surveys.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/surveys/surveys.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveysclientt/src/app/surveys/surveys.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../surveysclientt/src/app/surveys/surveys.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b8255e8-b25d-4a2f-bc35-4405d7fd2707.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b8255e8-b25d-4a2f-bc35-4405d7fd2707.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Beans/AnswersBean.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Beans/LecturerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Beans/LecturerBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Beans/QuestionsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Beans/QuestionsBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Beans/SubjectsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Beans/SubjectsBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Beans/SurveysBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Beans/SurveysBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/DTO/AnswersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/DTO/AnswersDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Entities/Answers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Entities/Answers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/REST/AnswersREST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Entities/Lecturers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Entities/Lecturers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/surveys/REST/QuestionsREST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/REST/QuestionsREST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/REST/SubjectsREST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/REST/SubjectsREST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Utility/DTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Utility/DTOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Utility/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Utility/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/Utility/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/surveys/Utility/Validate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/surveys/service/SurveysService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/surveys/Beans/LecturerBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/surveys/Beans/LecturerBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/surveys/Beans/SurveysBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/surveys/Beans/SurveysBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/surveys/Entities/Lecturers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/surveys/Entities/Lecturers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/surveys/REST/LecturerREST.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/surveys/REST/LecturerREST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/surveys/REST/SurveysREST.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/surveys/REST/SurveysREST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/surveys/Utility/DTOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/surveys/Utility/DTOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/surveys/Utility/Messages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/surveys/Utility/Messages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/surveys/Utility/Validate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/surveys/Utility/Validate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Beans/LecturerBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Beans/LecturerBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Beans/SurveysBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Beans/SurveysBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Entities/Lecturers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Entities/Lecturers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/REST/LecturerREST.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/REST/LecturerREST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/REST/SurveysREST.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/REST/SurveysREST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Utility/DTOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Utility/DTOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Utility/Messages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Utility/Messages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Utility/Validate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/surveys/WEB-INF/classes/surveys/Utility/Validate.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,232 +137,129 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47767857">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Answers.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Validate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Messages.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Result.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/service/SurveysService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#0#83#1" expanded="true" />
-                    <element signature="e#0#50#1" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/QuestionsREST.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/SurveysBean.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-827">
-                  <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#0#57#1" expanded="true" />
-                    <element signature="e#0#52#1" expanded="true" />
-                    <element signature="e#0#58#1" expanded="true" />
-                    <element signature="e#0#54#1" expanded="true" />
-                    <element signature="e#0#53#1" expanded="true" />
-                    <element signature="e#0#23#1" expanded="true" />
-                    <element signature="e#3627#3628#0" expanded="true" />
-                    <element signature="e#3669#3670#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="428">
-                  <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/SubjectsREST.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="41" column="73" lean-forward="true" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#663#664#0" expanded="true" />
-                    <element signature="e#720#721#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/SubjectsBean.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-82">
-                  <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#0#24#1" expanded="true" />
-                    <element signature="e#1130#1131#0" expanded="true" />
-                    <element signature="e#1201#1202#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/DTOMapper.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/AnswersDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Lecturers.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/QuestionsDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" selection-start-line="8" selection-end-line="8" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/SurveysDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/SubjectsDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="77" column="56" selection-start-line="77" selection-start-column="56" selection-end-line="77" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/QuestionsBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#0#25#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/SurveysBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#0#57#1" expanded="true" />
+                <element signature="e#0#52#1" expanded="true" />
+                <element signature="e#0#58#1" expanded="true" />
+                <element signature="e#0#54#1" expanded="true" />
+                <element signature="e#0#66#1" expanded="true" />
+                <element signature="e#0#53#1" expanded="true" />
+                <element signature="e#0#23#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Surveys.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/QuestionsREST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/LecturerBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#25#1" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+                <element signature="e#959#960#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDetailsDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Answers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Subjects.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -361,31 +297,32 @@
         <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/QuestionsDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/SubjectsDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/service/SurveysService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/surveys/Utility/DTOMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/SurveysDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Entities/Surveys.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Entities/Subjects.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Entities/Questions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/surveys/Entities/Lecturers.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Utility/ResultEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/ErrorMessageDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/validation.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/Validation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/surveys/Utility/Validate.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Beans/AnswersBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/AnswersDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/REST/AnswersREST.java" />
-        <option value="$PROJECT_DIR$/src/main/java/surveys/Beans/LecturerBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Beans/QuestionsBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Entities/Answers.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Beans/SubjectsBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/surveys/REST/QuestionsREST.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/REST/SubjectsREST.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDetailsDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/Entities/Lecturers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/Utility/DTOMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/Beans/LecturerBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/ErrorMessageDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/Utility/Validate.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Beans/SurveysBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java" />
         <option value="$PROJECT_DIR$/src/main/java/surveys/Utility/Messages.java" />
-        <option value="$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java" />
-        <option value="$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/surveys/REST/QuestionsREST.java" />
       </list>
     </option>
   </component>
@@ -407,7 +344,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="y" value="40" />
     <option name="width" value="974" />
@@ -495,15 +432,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="surveys" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Surveys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surveyss" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="surveys" type="462c0819:PsiDirectoryNode" />
               <item name="Utility" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -556,6 +484,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Internship/Internship" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -674,7 +603,9 @@
       <workItem from="1569111659730" duration="2970000" />
       <workItem from="1569148602113" duration="6264000" />
       <workItem from="1569260497788" duration="8501000" />
-      <workItem from="1569348290801" duration="21522000" />
+      <workItem from="1569348290801" duration="21946000" />
+      <workItem from="1569688577537" duration="3366000" />
+      <workItem from="1569750724095" duration="21295000" />
     </task>
     <task id="LOCAL-00001" summary="added basic functionality, including: new DB schema and entity classes for persistence, new Beans, new REST classes&#10;number of persistence entities, beans and rest classes most probably won't change ever">
       <created>1567375133006</created>
@@ -722,7 +653,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115999000" />
+    <option name="totallyTimeSpent" value="141084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -734,10 +665,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7012384" visible="true" weight="0.1641791" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6998917" visible="true" weight="0.16897655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -745,10 +675,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info id="Persistence" order="8" sideWeight="0.2987616" side_tool="true" visible="true" weight="0.1641791" />
+      <window_info id="Persistence" order="8" sideWeight="0.30010834" side_tool="true" visible="true" weight="0.16897655" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30010834" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30010834" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33152762" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -768,7 +698,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="JSF" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.3665208" />
+      <window_info anchor="right" id="Database" order="7" weight="0.36620468" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="CDI" order="10" weight="0.32995737" />
@@ -792,42 +722,56 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java</url>
-          <line>26</line>
+          <line>27</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java</url>
-          <line>46</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java</url>
-          <line>49</line>
+          <line>74</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/surveys/Beans/LecturerBean.java</url>
-          <line>61</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java</url>
-          <line>82</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java</url>
+          <line>103</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/Dish.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/SingleOrder.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/dto/WSDish.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/Ingredient.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dto/WSError.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dto/WSIngredient.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dto/WSSingleOrder.java" />
@@ -879,75 +823,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Surveys.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/AnswersBean.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/AnswersREST.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/Validation.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/SubjectsREST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state>
+          <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Questions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/SubjectsBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Subjects.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/QuestionsDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/SubjectsDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/AnswersBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#0#23#1" expanded="true" />
-            <element signature="e#0#52#1" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/LecturerBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/SurveysDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="e#0#25#1" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/QuestionsBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="170">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#0#25#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/AnswersREST.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="51">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/DTOMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/AnswersDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -962,62 +923,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Validate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Subjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="102">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDetailsDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/QuestionsREST.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Questions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/SubjectsBean.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.4.2.Final/hibernate-core-5.4.2.Final.jar!/org/hibernate/procedure/internal/ProcedureCallImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#24#1" expanded="true" />
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1201#1202#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="197">
+          <caret line="470" column="19" selection-start-line="470" selection-start-column="19" selection-end-line="470" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/SubjectsREST.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0.jar!/javax/persistence/TypedQuery.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="41" column="73" lean-forward="true" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Messages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="119">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1033,103 +973,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/DTOMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Surveys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        <state relative-caret-position="255">
+          <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/AnswersDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/Validation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/LecturersDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/QuestionsDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/SubjectsDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/SurveysDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Lecturers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/SurveysBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-827">
+        <state relative-caret-position="189">
           <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1137,11 +993,97 @@
             <element signature="e#0#52#1" expanded="true" />
             <element signature="e#0#58#1" expanded="true" />
             <element signature="e#0#54#1" expanded="true" />
+            <element signature="e#0#66#1" expanded="true" />
             <element signature="e#0#53#1" expanded="true" />
             <element signature="e#0#23#1" expanded="true" />
-            <element signature="e#3627#3628#0" expanded="true" />
-            <element signature="e#3669#3670#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Entities/Lecturers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/LecturerBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#25#1" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/DTO/ErrorMessageDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/LecturerREST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="77" column="56" selection-start-line="77" selection-start-column="56" selection-end-line="77" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Beans/QuestionsBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#25#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/QuestionsREST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Messages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/Utility/Validate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="58" lean-forward="true" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/surveys/REST/SurveysREST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
         </state>
       </provider>
     </entry>

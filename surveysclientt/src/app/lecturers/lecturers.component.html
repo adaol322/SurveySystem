@@ -1,6 +1,5 @@
-<button  routerLink="/createLecturer" routerLinkActive="active">Add Lecturer</button>
-
 <div class="center">
+    <button routerLink="/createLecturer" routerLinkActive="active">Add Lecturer</button>
     <table class="table table-trapped">
         <thead>
         <tr>
@@ -14,9 +13,14 @@
                 <td>{{lecturer.idLecturers}}</td>
                 <td>{{lecturer.name }} </td>
                 <td>{{lecturer.surname}}</td>
-                <td><button routerLink ="/updateLecturer" routerLinkActive="active">Edit Lecturer</button></td>
+                <td><button [routerLink] ="['/showLecturer', lecturer.idLecturers]" routerLinkActive="active">Lecturer Details</button></td>
+                <td><button [routerLink] ="['/updateLecturer', lecturer.idLecturers]" routerLinkActive="active">Edit Lecturer</button></td>
+                <td><button (click)="deleteLecturer(lecturer.idLecturers)">Delete Lecturer</button></td>
             </tr>
         </tbody>
     </table>
+    <div class="success">{{ successMessage }}</div>
+    <div class="error">{{ errorMessage }}</div>
+
 </div>
   

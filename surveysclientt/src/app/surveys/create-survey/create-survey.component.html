@@ -1,23 +1,24 @@
 <div class="center">
+    <br>
     <div class="form-group">
         {{'Lecturer'}}
         <select id="lecturer" name="lecturer" [(ngModel)]="idLecturers">
-            <option *ngFor="let lecturer of lecturers" [value]=lecturer.id>
-            {{lecturer.name}} {{lecturer.surname}}
+            <option *ngFor="let lecturer of lecturers" [value]=lecturer.idLecturers>
+                {{lecturer.name}} {{lecturer.surname}}
             </option>
         </select>
         {{'Subject'}}
-        <select id="subject" name="subject" [(ngModel)]="subject">
-            <option *ngFor="let subject of subjects" [value]=subject>
-            {{subject.name}}
+        <select id="subject" name="subject" [(ngModel)]="idSubjects">
+            <option *ngFor="let subject of subjects" [value]=subject.idSubjects>
+                {{subject.name}}
             </option>
         </select>
     </div>
-    <tbody>
-        <td>{{questions[index].question}}</td>
-        <div class="form-group">{{'Answer: '}}
-            <input [(ngModel)]="answerString">
-            <button (click)="createAnswer()">Next question</button>
-        </div>
-    </tbody>
+    <br>
+    <h4><strong>Question: </strong> {{questions[index].question}}</h4>
+    <div class="form-group">{{'Answer: '}}
+        <input [(ngModel)]="answerString">
+        <button (click)="createAnswer()">Next question</button>
+    </div>
+
 </div>

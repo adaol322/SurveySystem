@@ -1,0 +1,10 @@
+<br><br>
+<h2>{{lecturerDetails.name}} {{lecturerDetails.surname}}</h2>
+<p><strong>Phone: </strong> {{lecturerDetails.phone}} </p>
+<p><strong>Email Address: </strong> {{lecturerDetails.email}} </p>
+<p><strong>Title: </strong> {{lecturerDetails.title}} </p>
+<button [routerLink] ="['/updateLecturer', lecturerDetails.idLecturers]" routerLinkActive="active">Edit Lecturer</button>
+<button (click)="deleteLecturer(lecturerDetails.idLecturers)">Delete Lecturer</button>
+<div class="success">{{ successMessage }}</div>
+<div class="error">{{ errorMessage }}</div>
+ 

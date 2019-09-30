@@ -1,6 +1,7 @@
 package surveys.REST;
 
 import surveys.Beans.SurveysBean;
+import surveys.DTO.AnswersDTO;
 import surveys.DTO.SurveysDTO;
 import surveys.Entities.Surveys;
 import surveys.Utility.DTOMapper;
@@ -24,8 +25,8 @@ public class SurveysREST {
 
     @GET
     public Response getAllSurveys() {
-        List<SurveysDTO> sur = surveysBean.readAll();
-        return Response.ok(sur).build();
+        List<SurveysDTO> surveysDTOS = surveysBean.readAll();
+        return Response.ok(surveysDTOS).build();
     }
 
     @GET
@@ -43,9 +44,30 @@ public class SurveysREST {
 
     @POST
     @Path("/add")
-    public void createSurvey(SurveysDTO surveysDTO) {
+    public Response createSurvey(SurveysDTO surveysDTO) {
+        if(surveysDTO.getLecturerDTO() == null || surveysDTO.getSubjectDTO() == null)
+            return Response
+                    .status(Response.Status.BAD_REQUEST)
+                    .entity(Messages.CHOOSE_LECTURER_AND_SUBJECT)
+                    .type(MediaType.TEXT_PLAIN)
+                    .build();
+
         surveysBean.create(surveysDTO);
+        return Response.ok(Messages.SURVEY_COMPLETED).build();
     }
 
+    @GET
+    @Path("{id}/answers")
+    public Response getSurveyAnswers(@PathParam("id") Long id){
+        Optional<List<AnswersDTO>> answersDTOS = Optional.ofNullable(surveysBean.getAnswersBySurveyId(id));
+        if(!answersDTOS.isPresent()){
+            return Response
+                    .status(Response.Status.BAD_REQUEST)
+                    .entity(Messages.WRONG_ID)
+                    .type(MediaType.TEXT_PLAIN)
+                    .build();
+        }
+        return Response.ok(answersDTOS.get()).build();
+    }
 
 }
